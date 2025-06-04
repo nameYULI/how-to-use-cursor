@@ -1,0 +1,47 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# 项目结构与开发指南
+
+本项目基于 [Next.js](mdc:next.config.ts) 框架，使用 TypeScript 与 Tailwind CSS 进行开发，目录结构简洁，适合快速上手。
+
+## 主要目录说明
+- [app/](mdc:app)：主要应用代码目录，包含页面、全局布局与样式。
+  - [page.tsx](mdc:app/page.tsx)：首页页面组件，项目入口。
+  - [layout.tsx](mdc:app/layout.tsx)：全局布局组件。
+  - [globals.css](mdc:app/globals.css)：全局样式，集成 Tailwind。
+- [public/](mdc:public)：静态资源目录（如图片、SVG）。
+- [next.config.ts](mdc:next.config.ts)：Next.js 配置文件。
+- [tsconfig.json](mdc:tsconfig.json)：TypeScript 配置。
+- [package.json](mdc:package.json)：依赖与脚本管理。
+- [.gitignore](mdc:.gitignore)：Git 忽略文件配置。
+- [eslint.config.mjs](mdc:eslint.config.mjs)：ESLint 代码规范配置。
+- [postcss.config.mjs](mdc:postcss.config.mjs)：PostCSS 配置。
+
+## 启动与开发
+- 启动开发环境：`yarn dev` 或 `npm run dev`
+- 构建生产环境：`yarn build` 或 `npm run build`
+- 启动生产环境：`yarn start` 或 `npm run start`
+- 代码检查：`yarn lint` 或 `npm run lint`
+
+## 依赖说明
+- 主要依赖：`next`、`react`、`react-dom`
+- 开发依赖：`typescript`、`@types/*`、`tailwindcss`、`eslint` 等
+
+## 代码规范
+- 采用 ESLint，规则见 [eslint.config.mjs](mdc:eslint.config.mjs)
+- 推荐使用 TypeScript 严格模式
+- 使用Tailwind CSS进行样式开发，注意使用tailwind-merge处理样式冲突
+
+## 样式
+- 全局样式入口为 [app/globals.css](mdc:app/globals.css)
+- 使用 Tailwind CSS 进行原子化样式开发
+
+## 版本控制
+- 忽略 node_modules、.next、环境变量等文件，详见 [.gitignore](mdc:.gitignore)
+
+## 其他
+- TypeScript 环境声明见 [next-env.d.ts](mdc:next-env.d.ts)
+- 推荐从 [app/page.tsx](mdc:app/page.tsx) 开始阅读和开发

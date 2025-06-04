@@ -1,26 +1,116 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0a0a1f;
+  --foreground: #ffffff;
+  --primary: #00a8ff;
+  --secondary: #0097e6;
+  --accent: #00d2d3;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  body {
+    @apply bg-[var(--background)] text-[var(--foreground)] font-sans overflow-x-hidden;
+    background: linear-gradient(to bottom, #0a0a1f, #1a1a3f);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+  .stars-container {
+    @apply fixed w-screen h-screen overflow-hidden -z-10;
+  }
+
+  .tech-card {
+    @apply bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl p-8 
+           transition-all duration-300 hover:shadow-[0_0_30px_rgba(0,168,255,0.3)]
+           hover:border-[var(--primary)] relative overflow-hidden;
+  }
+
+  .tech-card::before {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent
+           -translate-x-full hover:translate-x-full transition-transform duration-1000;
+  }
+
+  .tech-card:hover {
+    @apply -translate-y-1 shadow-2xl shadow-black/30 border-[var(--primary)];
+  }
+
+  .glow-text {
+    text-shadow: 0 0 10px var(--primary),
+                 0 0 20px var(--primary),
+                 0 0 40px var(--primary);
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-[var(--primary)] to-[var(--accent)] 
+           bg-clip-text text-transparent drop-shadow-[0_0_10px_rgba(0,168,255,0.3)];
+  }
+
+  .nav-button {
+    @apply rounded-full w-14 h-14 flex items-center justify-center text-2xl
+           transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-white/20
+           backdrop-blur-lg border border-white/20;
+  }
+}
+
+@layer utilities {
+  .floating {
+    animation: floating 3s ease-in-out infinite;
+  }
+
+  .pulse {
+    animation: pulse 2s ease-in-out infinite;
+  }
+
+  .slide-in {
+    animation: slideIn 0.5s ease-out forwards;
+  }
+
+  .fade-in {
+    animation: fadeIn 1s ease-out forwards;
+  }
+}
+
+@keyframes floating {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.05); opacity: 0.8; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* 星空背景动画 */
+.stars-bg {
+  @apply absolute w-full h-full;
+  background-image: radial-gradient(2px 2px at calc(var(--x) * 1px) calc(var(--y) * 1px),
+                    white,
+                    rgba(0, 0, 0, 0));
+  background-size: 200px 200px;
+  animation: stars 8s linear infinite;
+}
+
+@keyframes stars {
+  from { transform: translateY(0); }
+  to { transform: translateY(-200px); }
 }
