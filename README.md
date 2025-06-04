@@ -1,36 +1,158 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Cursor 使用技巧与最佳实践
 
-## Getting Started
+一个展示 Cursor AI 编辑器使用技巧的现代化网站，帮助开发者掌握 AI 辅助开发的精髓。
 
-First, run the development server:
+## 🌟 项目特色
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+### 📱 响应式设计
+- **桌面端**：左右侧垂直居中导航按钮，提供流畅的页面切换体验
+- **移动端**：底部悬浮导航栏，包含前进、后退和首页快捷按钮
+- **自适应布局**：完美适配各种屏幕尺寸
+
+### 🎨 现代化 UI
+- **科技感设计**：星空背景动画，营造未来科技氛围
+- **渐变效果**：精美的文字渐变和悬浮动画
+- **卡片式布局**：统一的卡片设计语言，提升视觉一致性
+- **流畅动画**：使用 Animate.css 实现丰富的页面动效
+
+### 🔄 完整导航循环
+```
+首页 ⟷ 智能代码理解 ⟷ 高效代码生成 ⟷ 智能规则管理 ⟷ 实用开发技巧 ⟷ 痛点解决方案 ⟷ 进阶开发指南 ⟷ 首页
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📚 内容模块
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 1. 🧠 智能代码理解
+- **项目结构分析**：快速理解复杂代码库架构
+- **智能代码导航**：语义搜索和上下文相关推荐
+- **文档智能集成**：@Docs、@Web、MCP 知识连接
+- **实战案例**：包含具体操作步骤和快捷键指南
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 2. ⚡ 高效代码生成
+- **Agent 模式**：通过 ⌘I 启动智能助手，生成复杂组件（搜索+分页用户列表）
+- **Ask 模式**：快速问答获取专业建议（React 组件优化实例）
+- **Manual 模式**：传统手动编辑模式，完全由开发者控制代码编写过程
+- **最佳实践**：企业级代码生成模式和技巧
 
-## Learn More
+### 3. 📚 智能规则管理
+- **结构化规则系统**：.cursor/rules 目录管理
+- **智能规则应用**：自动识别和应用相关规则
+- **团队协作增强**：统一开发标准和规则共享
+- **实际配置**：完整的规则文件示例
 
-To learn more about Next.js, take a look at the following resources:
+### 4. 💡 实用开发技巧
+- **代码分析技巧**：语义搜索、依赖可视化、性能检测
+- **效率提升技巧**：快捷键优化、代码片段管理、自动化工作流
+- **最佳实践技巧**：代码审查、测试策略、文档生成
+- **详细指南**：包含快捷键说明和配置方法
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 5. 🎯 痛点解决方案
+- **代码理解难题**：新项目快速上手、遗留代码分析、业务逻辑梳理
+- **重构优化难题**：安全重构、性能优化、代码异味检测
+- **团队协作难题**：代码审查、知识传递、规范执行
+- **系统性方案**：完整的问题分析和解决流程
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 6. 🚀 进阶开发指南
+- **高级代码生成**：微服务架构设计、复杂算法实现
+- **深度代码分析**：架构分析、安全审计、依赖分析、性能分析
+- **自动化工作流**：企业级 CI/CD、监控告警、代码质量门禁
+- **企业实践**：包含完整的 DevOps 配置示例
 
-## Deploy on Vercel
+## 🛠️ 技术栈
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **框架**：Next.js 15.3.3 (App Router)
+- **语言**：TypeScript
+- **样式**：Tailwind CSS 4
+- **动画**：Animate.css
+- **图标**：Emoji 表情符号
+- **包管理**：Yarn
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📦 项目结构
+
+```
+how-to-use-cursor/
+├── app/                    # Next.js App Router
+│   ├── components/         # 共享组件
+│   │   └── Navigation.tsx  # 导航组件
+│   ├── understand/         # 智能代码理解
+│   ├── generate/          # 高效代码生成
+│   ├── rules/             # 智能规则管理
+│   ├── tips/              # 实用开发技巧
+│   ├── solutions/         # 痛点解决方案
+│   ├── advanced/          # 进阶开发指南
+│   ├── globals.css        # 全局样式
+│   ├── layout.tsx         # 根布局
+│   └── page.tsx           # 首页
+├── public/                # 静态资源
+├── .next/                 # Next.js 构建输出
+└── package.json           # 项目配置
+```
+
+## 🚀 快速开始
+
+### 安装依赖
+```bash
+yarn install
+```
+
+### 启动开发服务器
+```bash
+yarn dev
+```
+
+### 构建生产版本
+```bash
+yarn build
+```
+
+### 启动生产服务器
+```bash
+yarn start
+```
+
+## ✨ 最新优化改进
+
+### 🔧 用户体验优化
+1. **完整的导航循环**：支持从高级页面回到首页的完整导航链路
+2. **移动端友好**：新增底部悬浮导航栏，解决移动端导航问题
+3. **无障碍访问**：添加 title 属性，提升可访问性
+
+### 📝 内容质量提升
+1. **更具体的功能描述**：将抽象描述改为具体功能说明
+2. **实战导向的代码示例**：所有示例都基于真实开发场景
+3. **循序渐进的学习路径**：从基础理解到高级应用的完整学习体系
+
+### 🎨 界面体验增强
+1. **统一的设计语言**：所有页面保持一致的视觉风格
+2. **优化的动画效果**：更流畅的页面过渡和交互反馈
+3. **响应式布局**：完美适配桌面端和移动端
+
+### 💻 技术实现优化
+1. **组件化导航**：统一的 Navigation 组件，便于维护
+2. **类型安全**：完整的 TypeScript 类型定义
+3. **性能优化**：合理的代码分割和资源加载
+
+## 🎯 使用指南
+
+### 桌面端导航
+- **左侧按钮**：返回上一页
+- **右侧按钮**：前往下一页
+- **首页特殊处理**：左侧按钮连接到最后一页（进阶指南）
+
+### 移动端导航  
+- **底部导航栏**：包含前进、首页、后退三个按钮
+- **悬浮设计**：不遮挡页面内容，提供最佳阅读体验
+
+### 学习路径建议
+1. **新手入门**：从"智能代码理解"开始，了解 Cursor 基本功能
+2. **技能提升**：学习"高效代码生成"和"实用开发技巧"
+3. **团队协作**：掌握"智能规则管理"和"痛点解决方案"
+4. **专家进阶**：深入"进阶开发指南"，掌握企业级应用
+
+## 📧 反馈与贡献
+
+欢迎提交 Issue 和 Pull Request 来帮助改进这个项目！
+
+## 📄 License
+
+MIT License - 详见 [LICENSE](LICENSE) 文件

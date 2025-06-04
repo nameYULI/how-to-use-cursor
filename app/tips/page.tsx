@@ -28,27 +28,94 @@ const tipFeatures = [
   },
 ];
 
-const codeExample = `// 示例：开发技巧应用
-class DevelopmentTips {
-  // 1. 代码分析
-  static analyzeCode() {
-    cursor.semanticSearch("pattern");
-    cursor.visualizeDependencies();
-    cursor.detectBottlenecks();
-  }
+const codeExample = `// 示例：Cursor 开发技巧实战指南
 
-  // 2. 效率提升
-  static boostEfficiency() {
-    cursor.customizeShortcuts();
-    cursor.manageSnippets();
-    cursor.automateWorkflow();
+// 1. 高效代码分析技巧
+class CodeAnalysisTips {
+  static semanticSearch() {
+    // Cmd+Shift+F 语义搜索示例：
+    // "处理用户认证的代码"
+    // "包含支付逻辑的文件" 
+    // "React hooks 相关代码"
+    // "处理文件上传的函数"
   }
+  
+  static visualizeDependencies() {
+    // 在 Chat 中询问：
+    // "分析这个文件的依赖关系"
+    // "找出循环依赖问题"
+    // "显示模块之间的调用关系"
+  }
+  
+  static performanceAnalysis() {
+    // 选中代码块后询问：
+    // "这段代码有什么性能问题？"
+    // "如何优化这个算法的时间复杂度？"
+    // "找出内存泄漏的潜在风险"
+  }
+}
 
-  // 3. 最佳实践
-  static applyBestPractices() {
-    cursor.reviewCode();
-    cursor.optimizeTests();
-    cursor.generateDocs();
+// 2. 效率提升技巧
+class EfficiencyTips {
+  static keyboardShortcuts() {
+    // 必备快捷键：
+    // Cmd+K: 快速文件搜索
+    // Cmd+Shift+P: 命令面板
+    // Cmd+L: 选择整行并与 AI 对话
+    // Cmd+I: 行内 AI 编辑
+    // Ctrl+Shift+L: 选择所有匹配项
+  }
+  
+  static codeSnippets() {
+    // 创建自定义代码片段：
+    // 1. Cmd+Shift+P -> "Preferences: Configure User Snippets"
+    // 2. 选择语言 (如 typescript.json)
+    // 3. 添加常用模板
+  }
+  
+  static automatedWorkflow() {
+    // 设置自动化任务：
+    // 1. 在 .vscode/tasks.json 中配置任务
+    // 2. 使用 Cursor 生成构建脚本
+    // 3. 配置 Git hooks 进行代码质量检查
+  }
+}
+
+// 3. 最佳实践技巧  
+class BestPractices {
+  static codeReview() {
+    // AI 辅助代码审查：
+    // 1. 选中要审查的代码
+    // 2. 在 Chat 中询问：
+    //    "审查这段代码的质量"
+    //    "检查是否有安全漏洞"
+    //    "建议改进的地方"
+    //    "是否符合最佳实践"
+  }
+  
+  static testOptimization() {
+    // AI 生成测试用例：
+    // "为这个函数生成单元测试"
+    // "创建集成测试用例"
+    // "生成边界条件测试"
+    // "添加错误处理测试"
+  }
+  
+  static documentationGeneration() {
+    // AI 自动生成文档：
+    // 选中函数/类，然后询问：
+    // "为这个函数生成 JSDoc 注释"
+    // "创建 API 文档"
+    // "生成使用示例"
+    // "写一份 README 文档"
+  }
+  
+  static versionControl() {
+    // Git 工作流优化：
+    // 1. 使用 AI 生成有意义的提交信息
+    // 2. 自动化代码格式化 (pre-commit hooks)
+    // 3. AI 辅助 PR 描述生成
+    // 4. 自动化 changelog 生成
   }
 }`;
 

@@ -38,16 +38,38 @@ const features = [
   },
 ];
 
-const codeExample = `// 示例：使用 Cursor 分析代码
-function analyzeCode() {
-  // 1. 启用项目结构分析
-  cursor.enableProjectStructure();
+const codeExample = `// 示例：Cursor 智能代码理解实战
+// 1. 项目结构分析 - 快速了解项目架构
+function exploreProject() {
+  // 在 Settings > Cursor Features 中启用 Include Project Structure
+  // 然后在 Chat 中询问：
+  // "分析这个项目的架构和主要模块"
+  // "解释这个组件的作用和依赖关系"
+}
 
-  // 2. 智能代码导航
-  cursor.navigateToDefinition();
-  
-  // 3. 文档智能集成
-  cursor.searchDocs("react hooks");
+// 2. 智能代码导航 - 快速定位相关代码
+function smartNavigation() {
+  // 使用 Cmd+K 打开文件搜索
+  // 使用 Cmd+Shift+F 进行语义搜索：
+  // "用户认证相关的代码"
+  // "处理支付的函数"
+  // "React 状态管理"
+}
+
+// 3. 文档智能集成 - 获取最新技术资料
+function useDocumentation() {
+  // 在 Chat 中使用特殊前缀：
+  // @Docs 查询官方文档：@Docs Next.js routing
+  // @Web 搜索最新信息：@Web React 18 新特性
+  // 直接询问："这个 API 的最佳使用方式是什么？"
+}
+
+// 4. 上下文理解 - AI 分析代码关系
+function contextAnalysis() {
+  // 选中代码块，然后在 Chat 中询问：
+  // "这段代码的作用是什么？"
+  // "如何优化这个函数的性能？"
+  // "这里有什么潜在的 bug？"
 }`;
 
 export default function UnderstandPage() {
